@@ -1,0 +1,1 @@
+darknet detector test C:/src/darknet/data/obj.data C:/src/darknet/cfg/yolov4-custom.cfg C:/src/darknet/backup/yolov4-custom_last.weights path_to_img -thresh 0.3 -dont_show -save_labels

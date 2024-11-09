@@ -1,0 +1,10 @@
+C:\Users\DELL\Desktop\project\part_1_1.txt
+C:\Users\DELL\Desktop\project\part_1_2.txt
+C:\Users\DELL\Desktop\project\part_1_3.txt
+C:\Users\DELL\Desktop\project\part_2_1.txt
+C:\Users\DELL\Desktop\project\part_2_2.txt
+C:\Users\DELL\Desktop\project\part_2_3.txt
+C:\Users\DELL\Desktop\project\part_3_1.txt
+C:\Users\DELL\Desktop\project\part_3_2.txt
+C:\Users\DELL\Desktop\project\part_3_3.txt
+C:\Users\DELL\Desktop\project\one.txt
