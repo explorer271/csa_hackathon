@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask AI</title>
+</head>
+<body>
+    <div id="responseContainer"></div>
+
+    <label for="userPrompt">Ask me anything:</label>
+    <input type="text" id="userPrompt" />
+    <button onclick="getResponse()">Submit</button>
+
+    <script>
+        function getResponse() {
+            const prompt = document.getElementById('userPrompt').value;
+
+            fetch('http://localhost:5000/get-response', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prompt: prompt })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch response from server');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.text) {
+                    document.getElementById('responseContainer').innerHTML = `<p>${data.text}</p>`;
+                } else {
+                    document.getElementById('responseContainer').innerHTML = `<p>Error: ${data.error}</p>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('responseContainer').innerHTML = `<p>Error: ${error.message}</p>`;
+            });
+        }
+    </script>
+</body>
+</html>
